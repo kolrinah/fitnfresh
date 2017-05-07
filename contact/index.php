@@ -46,11 +46,10 @@
             }
 
         }
-        $mysqli = new mysqli("ejemplo.com", "usuario", "contraseña", "basedatos");
+        /*$mysqli = new mysqli("ejemplo.com", "usuario", "contraseña", "basedatos");
         $resultado = $mysqli->query("SELECT '¡Hola, querido usuario de MySQL!' AS _message FROM DUAL");
         $fila = $resultado->fetch_assoc();
-        echo htmlentities($fila['_message']);
-
+        echo htmlentities($fila['_message']);*/
         unset($_POST);
     ?>
  </body>
