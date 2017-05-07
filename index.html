@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Fit n Fresh Concessions</title>        
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="icon" type="image/x-icon" href="img/fitnfreshico.png">
+      <link rel="shortcut icon" type="image/x-icon" href="img/fitnfreshico.png">       
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <div style="width: 100%; text-align: center">
+          <img alt="Fit-n-Fresh Concessions" src="img/fitnfreshlogo.png" >
+      </div>
+    
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () { // Al cargar el DOM...
+ 
+        var ln = x=window.navigator.language||navigator.browserLanguage; // Guardamos en una variable el idioma de nuestro navegador
+ 
+        if ((window.location.href.indexOf('/es') >= 0) && (ln == 'es')) { // Si en nuestra url pone "/es/" (si estamos en la versión en español) y el idioma del navegador es español, no hay efecto (return false).
+            return false; 
+        }else if((window.location.href.indexOf('/es') < 0) && (ln == 'es')) {//Si en nuestra url NO pone "/es/" (si NO estamos en la versión en español) pero nuestro navegador es español, redirecciona hacia la versión de españa.
+            window.location.href = 'es/';
+        }else if ((window.location.href.indexOf('/en') >= 0) && (ln == 'en')) {
+            return false; 
+        }else if ((window.location.href.indexOf('/en') < 0) && (ln == 'en')){
+            window.location.href = 'en/';
+        } else{
+            window.location.href = 'en/';
+        }
+ 
+    });
+    </script>
+ </body>
+</html>
