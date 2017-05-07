@@ -19,7 +19,9 @@ body {
     background-color: #4BAA2C;
 }
 
-#about p{
+#about p,
+#offers p,
+#events p{
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 1.6em;
     letter-spacing: 1px;
@@ -41,7 +43,7 @@ h1 {
     font-family: 'Patrick Hand', cursive;
     font-size: 36px;
     letter-spacing: 2px;
-    text-transform: uppercase;
+   // text-transform: uppercase;
     color: #BAE971; 
     //font-weight: 600;
     margin-bottom: 30px;
@@ -193,7 +195,33 @@ h4 {
     -o-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-  
+
+.navbar-brand{
+    padding: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+.navbar-brand.reveal{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+    z-index: 5000;
+}
+
+.navbar-brand img{
+    padding: 5px 10px;
+    position: relative;
+    z-index: 100;
+}
+
 .navbar-nav li a:hover, 
 .navbar-nav li.active a {
     color: #FFFF66 !important;   

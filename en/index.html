@@ -22,7 +22,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage"></a>
+      <div style="width: 200px;" title="Fit'n Fresh Concessions">
+        <a class="navbar-brand" href="#myPage">
+            <svg width="100" height="100" style="position: absolute">
+                <circle cx="50" cy="50" r="49" stroke="#fcf8e3" stroke-width="2%" fill="#f4511e" />
+                <circle cx="50" cy="50" r="47" fill="#fcf8e3" />
+            </svg>
+            <img src="../img/fitnfreshlogomenu.png" alt="Fit-n-Fresh" />
+        </a>
+      </div>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -186,19 +194,7 @@
         </div>
     </div>
 
-      <!--div class="col-sm-4" >
-          <div class="wrapper">
-              <div class="frontcard">
-                  <img src="../img/slide500-1.jpg" class="img-rounded img-responsive">
-              </div>
-              <div class="backcard">
-                  <img src="../img/slide500-1.jpg" >
-                  <p>Offers vegan and vegetarian empanadas, wraps, salads, guacamoles paired with chips.</p>
-              </div>
-          </div>
-      </div-->
-
-      <div class="col-sm-2 splitted">
+    <div class="col-sm-2 splitted">
         
       <div class="row" >
         <div class="col-sm-12">            
@@ -273,7 +269,7 @@
     </div>
   </div>
   <div>
-      <h2><i class="material-icons" style="font-size:36px">format_quote</i>
+     <h2><i class="material-icons" style="font-size:36px">format_quote</i>
           <i>One of the great gifts that you can give people is to cook for them.</i>
           <i class="material-icons" style="font-size:36px">format_quote</i></h2>
      <h2>Ina Garten</h2>
@@ -284,7 +280,7 @@
 <!-- AVAILABLE -->  
 
 <div id="available" class="container-fluid text-center bg-warning">
-  <h2>WHEN TO CALL US </h2>
+  <h2>When to Call us </h2>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
@@ -392,7 +388,7 @@
 
 <!-- CONTACT US -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+  <h2 class="text-center">Contact us</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
@@ -404,13 +400,13 @@
         <div class="col-sm-7 slideanim">
             <div class="row">
                 <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" maxlength="50" required>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" maxlength="70" required>
                 </div>
             </div>
-            <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea><br>
+            <textarea class="form-control" id="message" name="message" placeholder="Message" required rows="5" maxlength="250"></textarea><br>
             <div class="row">
                 <div class="col-sm-11 form-group">
                     <button class="btn btn-default pull-right" type="submit">Send <span class="glyphicon glyphicon-send"></span></button>
@@ -434,7 +430,7 @@
     
 </footer>
 
-<div class="back-to-top" onclick="$('html,body').animate({scrollTop: $('body').offset().top}, 1000);">
+<div class="back-to-top" title="Back to Top" onclick="$('html,body').animate({scrollTop: $('body').offset().top}, 1000);">
           <i class="glyphicon glyphicon-chevron-up"></i>
 </div>
 
@@ -473,12 +469,19 @@ $(document).ready(function(){
       });
     } // End if
   });
-  
+
+  // Hide/Reveal back-to-top
   $(window).scroll(function () {
         if ($(this).scrollTop() > 300) $('.back-to-top').addClass('reveal');
         else $('.back-to-top').removeClass('reveal'); 
     });
-          
+
+  // Hide/Reveal LogoMenu
+  $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) $('.navbar-brand').addClass('reveal');
+        else $('.navbar-brand').removeClass('reveal');
+  });
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;

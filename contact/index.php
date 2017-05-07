@@ -29,16 +29,28 @@
             $to = "fitnfreshconcessions@gmail.com";
             $name = $_POST['name'];
             $subject = "Contact from: $name <$email>";
-            $headers = "From: no-reply@fitnfreshconcessions.com" . "\r\n" .
-                       "CC: $email \r\n";
+            $headers = "From: Fit-n-Fresh Concessions<no-reply@fitnfreshconcessions.com>" . "\r\n" .
+                       "CC: $name <$email> \r\n";
             // use wordwrap() if lines are longer than 70 characters
             $msg = wordwrap($msg,70);
 
             // send email
             mail($to, $subject, $msg, $headers);
-            echo '<h2>Message Successfully Sent!</h2>';
-            echo "<h2>We'll get back to you within 24 hours.</h2>";
+
+            if (isset($_POST['spanish'])){
+                echo "<h2>Mensaje Enviado Exitosamente!</h2>";
+                echo "<h2>Estaremos comunicándonos con ud. en las próximas 24 horas.</h2>";
+            }else{
+                echo "<h2>Message Successfully Sent!</h2>";
+                echo "<h2>We'll get back to you within 24 hours.</h2>";
+            }
+
         }
+        $mysqli = new mysqli("ejemplo.com", "usuario", "contraseña", "basedatos");
+        $resultado = $mysqli->query("SELECT '¡Hola, querido usuario de MySQL!' AS _message FROM DUAL");
+        $fila = $resultado->fetch_assoc();
+        echo htmlentities($fila['_message']);
+
         unset($_POST);
     ?>
  </body>
