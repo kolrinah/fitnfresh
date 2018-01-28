@@ -33,6 +33,13 @@ body {
     background-color:  #f0ad4e;
 }
 
+#contact p {        
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    text-align: justify; 
+}
+
 h1 {
    font-size: 48px;
    text-align: left;
@@ -43,9 +50,7 @@ h1 {
     font-family: 'Patrick Hand', cursive;
     font-size: 36px;
     letter-spacing: 2px;
-   // text-transform: uppercase;
     color: #BAE971; 
-    //font-weight: 600;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px #303030;
  }
@@ -70,7 +75,7 @@ h4 {
 }
 
 .bg-grey {
-    background-color: #f6f6f6;
+    background-color: #f6f6f6;	
 }
 
 .logo-small {
@@ -231,7 +236,6 @@ h4 {
   
 .navbar-nav li.active a {
     font-weight: bolder;
-    //text-shadow: 1px 1px 0px #000000;
 }
 
 .navbar-default .navbar-toggle {
