@@ -114,6 +114,17 @@ h4 {
     background-color: #f4511e;
 }
 
+.carousel-inner h1 {    
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #f4511e; 
+    margin-bottom: 30px;
+    margin-top: 0;    
+    text-shadow: 2px 2px 3px rgba(0,0,0,1),
+                 0px 0px 50px rgba(255,255,255, 1);
+    text-align: center;
+}
+
 .item h4 {
     font-size: 19px;
     line-height: 1.375em;
